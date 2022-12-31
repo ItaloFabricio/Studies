@@ -1,0 +1,110 @@
+:root{
+    --dark-blue: #31455a;
+    --light-blue: #5e6f82;
+    --opacity-dark-blue: #5b748f8a;
+    --menu-height: 45px;
+}
+
+html{
+    font-size:  62.5%;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: var(--dark-blue);
+    font-family: sans-serif;
+}
+
+.top-menu{
+    background: #fff;
+    width: 100%;
+    height: var(--menu-height);
+    display: flex;
+    align-items: center;
+
+    svg{
+        padding: 0px 15px;
+        border-right: 1px solid var(--opacity-dark-blue);
+        height: 100%;
+        width: 3rem;
+        cursor: pointer;
+    }
+}
+
+.lateral-menu{
+    background: #fff;
+    width: 0;
+    height: 100vh;
+    animation: menu-close 0.5s;
+
+    ul{ visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.3s, visibility 0.3s;
+
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li{
+            cursor: pointer;
+            color: var(--dark-blue);
+            font-size: 1.6rem;
+            height: 6.5rem;
+            border-top: 1px solid var(--opacity-dark-blue);
+            padding: 0 1.5rem;
+
+            white-space: nowrap;
+            transition: .2s ease-in-out;
+
+            &:hover{
+                color: #fff;
+                background: var(--light-blue);
+
+                a{
+                    color: #fff; 
+                }
+            }
+
+            svg{
+                margin-right: 1.5rem;
+            }
+
+            a{
+                display: flex;
+                align-items: center;
+                height: 100%;
+                text-decoration: none;
+                color: var(--dark-blue);
+            }
+        }
+    }
+
+    &.active{
+        width: 250px;
+        animation: menu-open 0.5s;
+
+        ul{
+            visibility: visible;
+            opacity: 1;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+    }
+}
+
+@keyframes menu-open{
+    from{
+        width: 0;
+    } to{
+        width: 250px;
+    }
+}
+
+@keyframes menu-close{
+    from{
+        width: 250px;
+    } to{
+        width: 0;
+    }
+}
