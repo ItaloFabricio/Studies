@@ -19,11 +19,20 @@ body{
 }
 
 section{
-    height: 1500px;
+    height: 2000px;
 }
 
 #app{
     margin-top: var(--menu-height);
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container{
+    height: 100%;
+    width: 100%;
+    overflow: auto;
 }
 
 .top-menu{
@@ -52,7 +61,6 @@ section{
     height: 100vh;
     animation: menu-close 0.5s;
 
-    position: fixed;
     top: var(--menu-height);
     left: 0;
 
