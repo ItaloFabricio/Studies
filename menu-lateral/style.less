@@ -59,7 +59,7 @@ section{
     background: #fff;
     width: 0;
     height: 100vh;
-    animation: menu-close 0.5s;
+    transition: width .5s;
 
     top: var(--menu-height);
     left: 0;
@@ -107,8 +107,8 @@ section{
     }
 
     &.active{
-        width: 250px;
-        animation: menu-open 0.5s;
+        width: 300px;
+        transition: width .5s;
 
         ul{
             visibility: visible;
@@ -118,7 +118,7 @@ section{
     }
 }
 
-@keyframes menu-open{
+/* @keyframes menu-open{
     from{
         width: 0;
     } to{
@@ -133,3 +133,16 @@ section{
         width: 0;
     }
 }
+ */
+
+ @media(max-width: 480px){
+    .lateral-menu{
+        position: fixed;
+        top: var(--menu-height);
+        left: 0;
+
+        &.active{
+            width: 90%;    
+        }
+    }
+ }
