@@ -5,6 +5,7 @@ let currentActive = 0;
 
 
 btnNext.addEventListener('click', nextClick);
+btnBack.addEventListener('click', backClick);
 
 function nextClick(){
     currentActive++;
@@ -23,6 +24,7 @@ function nextClick(){
 
        if((itemAttribute === '2') & (currentActive === 1)){
             item.classList.add('active');
+            btnBack.style.display = 'block';
             return
        }    
        if((itemAttribute === '3') & (currentActive === 2)){
@@ -34,4 +36,42 @@ function nextClick(){
         return
        }  
     }) 
+    console.log(currentActive);
+}
+
+function backClick(){
+    currentActive--;
+    const items = Array.from(document.getElementsByClassName('item'));
+
+    if(currentActive === 0){
+        btnBack.style.display = 'none';
+    }
+    
+    items.forEach((item) => {
+        const itemAttribute = item.getAttribute('data-step');
+        /* console.log(index);
+        console.log(item);
+        console.log(itemAttribute);
+        console.log(item.classList.value); */
+
+       if((itemAttribute === '2') & (currentActive === 0)){
+            item.classList.remove('active');
+            btnBack.style.display = 'none';
+            return
+       }    
+       if((itemAttribute === '3') & (currentActive === 1)){
+        item.classList.remove('active');
+        return
+       }      
+       if((itemAttribute === '4') & (currentActive === 2)){
+        item.classList.remove('active');
+        return
+       }  
+    }) 
+
+    
+    
+
+    console.log(currentActive);   
+    
 }
