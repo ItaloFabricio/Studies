@@ -9,13 +9,21 @@
 </head>
 <body>
     
-    <ul>
-        <li class="active" data-step="1">Crie sua conta</li>
-        <li class="active" data-step="2">Endereço</li>
-        <li data-step="3">Pagamento</li>
-        <li data-step="4">Confirmação</li>
-    </ul>
+    <div class="progress-bar">
+        <ul id="progress-bar">
+            <li class="item active" data-step="1">Crie sua conta</li>
+            <li class="item" data-step="2">Endereço</li>
+            <li class="item " data-step="3">Pagamento</li>
+            <li class="item" data-step="4">Confirmação</li>
+        </ul>
+    </div>
+    <div class="btns">
+        <button id="back" class="btn-secondary">Voltar</button>
+        <button id="next">Proximo</button>
+    </div>
+    
 
     <script src="https://cdn.jsdelivr.net/npm/less" ></script>
+    <script src="index.js"></script>
 </body>
 </html>
