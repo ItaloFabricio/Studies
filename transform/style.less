@@ -1,0 +1,29 @@
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box{
+    width: 300px;
+    height: 200px;
+    background: red;
+    border-radius: 25px;
+    animation: move 2s ease-in-out infinite;
+}
+
+@keyframes move{
+    0%{
+        transform: translateY(0px);
+        width: 200px;
+    }
+    50%{
+        transform: translateY(-50px);
+        width: 300px;
+    }
+    100%{
+        transform: translateY(0px);
+        width: 200px;
+    }
+}

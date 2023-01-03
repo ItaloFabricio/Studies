@@ -4,7 +4,6 @@ const btnBack = document.getElementById('back');
 let currentActive = 0;
 
 document.getElementById('back').style.display = 'none';
-
 btnNext.addEventListener('click', nextClick);
 btnBack.addEventListener('click', backClick);
 
