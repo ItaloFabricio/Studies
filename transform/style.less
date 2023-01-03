@@ -5,6 +5,9 @@ body{
     justify-content: center;
 }
 
+//Transisiton: a gente precisa que alguma coisa(um evento como o hover) para ele funcionar
+//Animation: elas são infinitas e não precisa de um gatilho
+
 .box{
     width: 300px;
     height: 200px;
@@ -25,5 +28,17 @@ body{
     100%{
         transform: translateY(0px);
         width: 200px;
+    }
+}
+
+.card{
+    width: 200px;
+    height: 100px;
+    background: #a8daff;
+    border-radius: 8px;
+    transition: height 1s;
+
+    &--active{
+        height: 200px;
     }
 }
