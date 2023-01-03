@@ -3,6 +3,7 @@ const btnBack = document.getElementById('back');
 
 let currentActive = 0;
 
+document.getElementById('back').style.display = 'none';
 
 btnNext.addEventListener('click', nextClick);
 btnBack.addEventListener('click', backClick);
@@ -56,7 +57,6 @@ function backClick(){
 
        if((itemAttribute === '2') & (currentActive === 0)){
             item.classList.remove('active');
-            btnBack.style.display = 'none';
             return
        }    
        if((itemAttribute === '3') & (currentActive === 1)){
