@@ -17,7 +17,7 @@
             <img class="userImg" src="./img/user.png" alt="Tela de cadastro de usuários">
             <h1>Cadastro de Usuários</h1>
         </div>
-        <p id="errorMsg" class="errorMsg"></p>
+        <p id="mensagensDeErro" class="errorMsg"></p>
         <form class="formularioCadastroUsuario" id="formularioCadastroUsuario">
             <div class="inputContainer">
                 <label for="nome">Nome</label> <span id="campoObrigatorio">(Campo obrigatório!)</span>
@@ -29,18 +29,16 @@
                 <label for="email">Email</label> <span id="campoObrigatorio">(Campo obrigatório!)</span>
                 <input name="email" id="email" type="text" placeholder="Digite o email">
                 
-            </div>       
+            </div>     
+            
+            <input id="idcliente" type="hidden" value="">
     
-            <button>
+            <button id="criarUsuario">
                 <img src="./img/create.png" alt="Criar Usuário">
             </button>
         </form>
         <table class="tabelaUsuarios" id="tabelaUsuarios">
-            <tr>
-                <th>Nome</th>
-                <th>E-mail</th>
-                <th>Ações</th>
-            </tr>
+           
            
                
         </table>
